@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://e6banfb3s5no"]
+
+[ext_resource type="Script" uid="uid://b0arujcwg2fb7" path="res://scripts/upgrades.gd" id="1_a0ma6"]
+
+[node name="upgrades" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_right = -946.0
+offset_bottom = -316.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a0ma6")
+
+[node name="reduce_friction" type="Button" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 150.0
+offset_right = 335.0
+offset_bottom = 244.0
+text = "reduce friction"
+
+[node name="upgrade_strength" type="Button" parent="."]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 19.0
+offset_right = 333.0
+offset_bottom = 109.0
+text = "upgrade strength"
+
+[connection signal="pressed" from="reduce_friction" to="." method="_on_reduce_friction_pressed"]
+[connection signal="pressed" from="upgrade_strength" to="." method="_on_upgrade_strength_pressed"]
